@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-   <ol>
+  </head>
+  <body>
+    <button id="btnSubmit">tekan aku dekk!!</button>
+    <ul id="container"></ul>
+    <script>
+      const btnSubmit = document.getElementById("btnSubmit");
 
-   </ol> 
+      async function Ui() {
+        let myPromise = new Promise((resolve, reject) => {
+          resolve("jangann ya dek ya!");
+        });
+        const container = document.getElementById("container");
+        container.innerHTML = await promise;
+      }
 
-   <script>
-    
-   </script>
-</body>
+      btnSubmit.onclick = function () {
+        Ui();
+      };
+    </script>
+  </body>
 </html>
