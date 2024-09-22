@@ -7,16 +7,18 @@
   </head>
   <body>
     <button id="btnSubmit">tekan aku dekk!!</button>
-    <ul id="container"></ul>
+    <h2 id="container"></h2>
     <script>
       const btnSubmit = document.getElementById("btnSubmit");
+      const container = document.getElementById("container");
 
       async function Ui() {
         let myPromise = new Promise((resolve, reject) => {
-          resolve("jangann ya dek ya!");
+          setTimeout(function () {
+            resolve("jangann ya dek ya!");
+          }, 3000);
         });
-        const container = document.getElementById("container");
-        container.innerHTML = await promise;
+        container.innerHTML = await myPromise;
       }
 
       btnSubmit.onclick = function () {
